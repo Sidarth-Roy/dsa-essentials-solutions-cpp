@@ -40,7 +40,6 @@ node* bubble_sort_LinkedList_itr(node* head)
     {
         if(cur->data >=cur->next->data)
         {
-            
             if(prev==NULL)
             {
                 //first node
@@ -48,41 +47,26 @@ node* bubble_sort_LinkedList_itr(node* head)
                 cur->next = nxt->next ;
                 nxt->next = cur ;
                prev=nxt ;
-                head = prev ;
-               
-                
+                head = prev ;    
             }
-            
             else
             {
-                
                 node* nxt = cur->next ;
                 prev->next = nxt ;
                 cur->next = nxt->next ;
                 nxt->next = cur ;
                 prev = nxt ;
-              
-                
+ 
             }
-            
         }
         else
         {
-           
-             prev = cur ; 
+            prev = cur ; 
             cur=cur->next ;
            
         }
-        
-        
-    
-    }
-       
+    }   
    }
-   
-    
-    
     return head ;
-    
 }
  
